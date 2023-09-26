@@ -1,0 +1,29 @@
+#Search-input{
+    border-radius: 50px;
+}
+
+#search-btn{
+    border-radius: 10px;
+}
+
+#sign-in{
+    border-radius: 50px;
+}
+
+#search{
+    margin-bottom: 40px !important;
+}
+
+a:hover {
+   
+    text-decoration: underline;
+    
+}
+
+.card{
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
