@@ -22,8 +22,28 @@ a:hover {
 
 .card{
     transition: box-shadow 0.2s ease;
+    margin-right: 20px;
 }
 
 .card:hover{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-title{
+   
+    font-weight: bold;
+}
+
+.navbar-toggler{
+    border: 0px !important;
+}
+
+
+
+
+@font-face {
+    font-family: Bree;
+    src: url(./BreeSerif-Regular.ttf);
+    font-family: Oleo-bold;
+    src: url(./Trocchi-Regular.ttf)
 }
