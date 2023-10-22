@@ -5,6 +5,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="RecipeUp.css">
+    <script src="https://kit.fontawesome.com/d2a5bb0631.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -21,16 +22,16 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex  justify-content-around" style="width: 45%;">
               
                 <li class="nav-item ">
-                    <a href="" class="nav-link text-white fw-bold active "><H5>HOME</H5></a>
+                    <a href="Home.html" class="nav-link text-white fw-bold active "><H5>HOME</H5></a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link text-white fw-bold"><h5>CATEGORIES</h5></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white fw-bold"><h5>MY PROFILE</h5></a>
+                    <a href="UserProfile.html" class="nav-link text-white fw-bold"><h5>MY PROFILE</h5></a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white fw-bold"><h5>SUBSCRIPTION</h5></a>
+                    <a href="Subscription.html" class="nav-link text-white fw-bold"><h5>SUBSCRIPTION</h5></a>
                 </li>
 
        
@@ -46,10 +47,10 @@
           </div>
         </div>
       </nav>
-      
+
       <div class="container-fluid d-flex  flex-column">
 
-          <div class="m-4 d-flex flex-column  p-3 align-items-center w-100" >
+          <div class="m-4 d-flex flex-column  p-3 align-items-center w-100 img" >
               <button class="btn"><img src="./uploadimg.png"  class="img-fluid " alt="" style="height: 400px; width: 400px;" ></button>
               <button class="btn btn-success m-4" id="imgButton" style="width: 15%;">Upload Image</button>
          </div>
@@ -69,18 +70,8 @@
                     <label for="Nutri" class="form-label"><h5>Nutrition</h5></label>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Calories">
+                            <input type="text" class="form-control" placeholder="">
                         </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Fat (g)">
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Protein (g)">
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Carb (g)">
-                        </div>
-                    </div>
                 </div>
 
                 <div class="m-3 w-75">
@@ -123,19 +114,19 @@ Add 1 cup of granulated sugar and vanilla extract. Mix until well combined.....
                     <label for="Links" class="form-label"><h5>Links</h5></label>
                     <div class=" d-flex" style="margin-bottom: 10px;">
 
-                        <button class="btn btn-primary w-25">Facebook</button>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2xl me-3 mt-3" style="color: #075ced;"></i></a>
                         <input type="text" class="form-control" style="margin-left: 5px;">
                     </div>
 
                     <div class=" d-flex" style="margin-bottom: 10px;">
 
-                        <button class="btn btn-danger  w-25" > Youtube </button>
+                        <a href="#"><i class="fa-brands fa-youtube fa-2xl me-3 mt-3" style="color: #e93407;"></i> </a>
                         <input type="text" class="form-control" style="margin-left: 5px;">
                     </div>
 
                     <div class=" d-flex" style="margin-bottom: 10px;">
 
-                        <button class="btn text-white  w-25" style="background-color: rgb(7, 183, 241);">Twitter</button>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2xl me-3 mt-3" style="color: #f10979;"></i></a>
                         <input type="text" class="form-control" style="margin-left: 5px;">
                     </div>
 
@@ -145,7 +136,7 @@ Add 1 cup of granulated sugar and vanilla extract. Mix until well combined.....
                 <div class="m-3 w-75">
                     <label for="Tags" class="form-label"><h5>Subscription</h5></label>
                     <div class="d-flex ">
-                        <select id="Gender" class="form-select form p-3 mb-3">
+                        <select id="Gender" class="form-select form p-3 mb-3 w-25">
                             <option>Free</option>
                             <option>Premium</option>                  
                         </select>
