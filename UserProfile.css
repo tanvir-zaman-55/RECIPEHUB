@@ -48,7 +48,10 @@ a:hover {
 .navbar-toggler{
     border: 0px !important;
 }
-
+#sign-in:hover{
+    background-color: white;
+    color: rgb(56, 170, 56) !important;
+}
 .form-label{
     font-family: Oleo-bold;
 }

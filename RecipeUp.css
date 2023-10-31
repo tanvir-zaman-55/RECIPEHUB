@@ -12,7 +12,10 @@ a:hover {
 #Search-input{
     border-radius: 50px;
 }
-
+#sign-in:hover{
+    background-color: white;
+    color: rgb(56, 170, 56) !important;
+}
 #search-btn{
     border-radius: 10px;
 }

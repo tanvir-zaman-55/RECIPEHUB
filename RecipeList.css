@@ -47,3 +47,7 @@ a:hover {
     font-family: Oleo-bold;
     src: url(./Trocchi-Regular.ttf)
 }
+#sign-in:hover{
+    background-color: white;
+    color: rgb(56, 170, 56) !important;
+}
