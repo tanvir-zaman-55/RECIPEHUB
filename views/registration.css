@@ -1,0 +1,30 @@
+form{
+    width: 450px;
+    height: 700px; 
+    margin-top: 0px !important;
+    
+ 
+ }
+
+ h2{
+     margin-bottom: 30px !important;
+ }
+ 
+ body{
+     background-color: black;
+ }
+ 
+ button{
+     margin-top: 15px !important; 
+ }
+ 
+ a{
+     text-decoration: none !important;
+ }
+ p{
+     margin-top: 15px !important;
+ }
+
+ #date{
+    margin-bottom: 15px !important;
+ }

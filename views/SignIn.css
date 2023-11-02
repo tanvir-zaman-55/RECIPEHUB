@@ -1,0 +1,29 @@
+form{
+   width: 450px;
+   height: 430px; 
+
+}
+
+.container{
+    margin-top: 50px !important;
+}
+h2{
+    margin-bottom: 30px !important;
+}
+
+body{
+    background-color: black;
+}
+
+button{
+    margin-top: 35px !important; 
+ 
+}
+
+a{
+    text-decoration: none !important;
+}
+p{
+    margin-top: 15px !important;
+}
+
