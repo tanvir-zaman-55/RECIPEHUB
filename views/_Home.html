@@ -86,7 +86,6 @@
                    
                     <button class="btn btn-danger text-white fw-bold btn-lg" id="search-btn" type="submit">Search</button>
                   </div>
-                  <div id="recipe-list"></div>
             </div>
 
         </div>
@@ -318,9 +317,6 @@
       }
 
       const username = getCookie("username");
-
-      let recipesArr = [];
-
       fetch("/recipeup/getRecipes", {
   method: "POST",
   headers: {
@@ -333,34 +329,11 @@
     return response.json();
   })
   .then((recipes) => {
-    recipesArr = recipes.map(recipe => recipe.recipename);
     displayRecipes(recipes);
   })
   .catch((error) => {
     console.error("Error fetching recipes:", error);
   });
-
-  document.getElementById('Search-input').addEventListener('input', function(event) {
-    const searchQuery = event.target.value.toLowerCase();
-    const filteredRecipes = recipesArr.filter(recipe => recipe.toLowerCase().includes(searchQuery));
-    if(searchQuery===''){
-        displayRecipesForSearch([])
-    }else{
-
-    displayRecipesForSearch(filteredRecipes);
-    }
-});
-
-function displayRecipesForSearch(recipes) {
-    const recipeListElement = document.getElementById('recipe-list');
-    recipeListElement.innerHTML = '';
-
-    recipes.forEach(recipe => {
-        const recipeElement = document.createElement('div');
-        recipeElement.textContent = recipe;
-        recipeListElement.appendChild(recipeElement);
-    });
-}
 
     document.getElementById("search-btn").addEventListener("click", function() {
         var searchInput = document.getElementById("Search-input").value;

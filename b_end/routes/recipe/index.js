@@ -15,4 +15,8 @@ router.post('/recipeup', recipe.create);
 router.post("/getUserRecipes", recipe.getRecipesByUser);
 router.post("/getRecipesByTag", recipe.getRecipesByTag);
 router.post("/getRecipesByName", recipe.getRecipesByName);
+router.post("/viewRecipe", recipe.viewRecipe);
+router.post("/getRecipeByName", recipe.getRecipeByName);
+router.post("/submitRating", recipe.submitRating);
+router.post("/getRecipes", recipe.getRecipes);
 module.exports = router;

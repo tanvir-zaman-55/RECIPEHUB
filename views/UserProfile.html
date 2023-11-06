@@ -119,6 +119,16 @@
     </div>
 
     <script>
+      function viewRecipe(recipename) {
+        console.log(recipename);
+          fetch("/recipeup/viewRecipe", {
+            method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ recipename: recipename }),
+          }).then((res) => window.location.href = 'http://localhost:3000/RecipeView.html')
+        }
       function getCookie(name) {
           let cookieArray = document.cookie.split(";");
           for (let i = 0; i < cookieArray.length; i++) {
@@ -178,7 +188,7 @@
                   ${recipe.recipenutrients}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <button class="btn btn-success">View</button>
+                  <button onclick="viewRecipe('${recipe.recipename}')" class="btn btn-success">View</button>
                   <p
                     class="fw-bolder me-3 mt-3"
                     style="color: rgb(141, 35, 35); font-family: Helvetica"

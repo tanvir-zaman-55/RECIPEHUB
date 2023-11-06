@@ -1,0 +1,88 @@
+
+a:hover {
+   
+    text-decoration: underline;
+    
+}
+
+#imgButton{
+    border-radius: 20px;
+}
+
+#Search-input{
+    border-radius: 50px;
+}
+
+#search-btn{
+    border-radius: 10px;
+}
+
+#sign-in{
+    border-radius: 50px;
+}
+
+#search{
+    margin-bottom: 40px !important;
+}
+
+a:hover {
+   
+    text-decoration: underline;
+    
+}
+
+.card{
+    transition: box-shadow 0.2s ease;
+    margin-right: 20px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-title{
+   
+    font-weight: bold;
+}
+
+.navbar-toggler{
+    border: 0px !important;
+}
+#sign-in:hover{
+    background-color: white;
+    color: rgb(56, 170, 56) !important;
+}
+.form-label{
+    font-family: Oleo-bold;
+}
+
+@font-face {
+        font-family: Bree;
+        src: url(./BreeSerif-Regular.ttf);
+        font-family: Oleo-bold;
+        src: url(./Trocchi-Regular.ttf)
+}
+
+h2,h3,h4,span{
+    font-family: Oleo-bold;
+   
+    font-weight: bold;
+}
+
+h4{
+    margin-top: 50px;
+}
+
+#propic{
+    border-radius: 200px;
+    margin-top: 50px;
+}
+
+.info{
+    margin-left: 200px;
+}
+
+.fa-brands{
+    margin-top: 60px;
+    margin-left: 20px;
+}

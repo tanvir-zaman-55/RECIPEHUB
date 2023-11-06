@@ -46,13 +46,13 @@ module.exports = {
         }
       },
       edit: async (req, res) => {
-        const { username, password, birthdate, location, email, gender } = req.body;
+        const { username } = req.body;
         try {
           const user = await User.findOne({ where: { username } });
     
           if (user) {
             await User.update(
-              { password, birthdate, location, email, gender },
+              {...req.body},
               { where: { username } }
             );
             res.send("User updated successfully.");

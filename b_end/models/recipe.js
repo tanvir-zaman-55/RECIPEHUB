@@ -61,11 +61,21 @@ module.exports = ( sequelize, DataTypes) => {
             default: null,
             allownull: true
         },
-        reciperating:{
+        reciperating: {
             type: DataTypes.INTEGER,
-            default: null,
-            allownull: true
-        }
+            defaultValue: 0,
+            allownull: true,
+          },
+          usersWhoRatedCount: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 0,
+          },
+          totalRatingCount: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 0,
+          },
         
     },
     {
