@@ -81,7 +81,7 @@
         <h4>Gender: <input type="text" id="gender" value="" /></h4>
         <h4>Country: <input type="text" id="country" value="" /></h4>
         <h4>Email: <input type="email" id="email" value="" /></h4>
-        <h4><span>Subscription:</span> Yes</h4>
+        <h4><span>Subscription: </span><span id="Subscription"></span></h4>
         <button id="updateProfile">Update Profile</button>
           
           <div class="mt-2 d-flex">
@@ -119,6 +119,24 @@
     </div>
 
     <script>
+      function deleteRecipe(name) {
+  fetch("/recipeup/deleteRecipe", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({recipename: name})
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Alert the response (e.g., "Recipe deleted successfully.")
+        location.reload();
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while deleting the recipe.");
+    });
+}
       function viewRecipe(recipename) {
         console.log(recipename);
           fetch("/recipeup/viewRecipe", {
@@ -158,6 +176,7 @@
           document.getElementById("gender").value = data.gender;
           document.getElementById("country").value = data.location;
           document.getElementById("email").value = data.email;
+          document.getElementById("Subscription").innerHTML = data.isPremium ? 'Yes' : 'No';
 
           // Add other user details similarly
         })
@@ -189,6 +208,7 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <button onclick="viewRecipe('${recipe.recipename}')" class="btn btn-success">View</button>
+                  <button onclick="deleteRecipe('${recipe.recipename}')">Delete</button>
                   <p
                     class="fw-bolder me-3 mt-3"
                     style="color: rgb(141, 35, 35); font-family: Helvetica"

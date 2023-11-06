@@ -19,4 +19,5 @@ router.post("/viewRecipe", recipe.viewRecipe);
 router.post("/getRecipeByName", recipe.getRecipeByName);
 router.post("/submitRating", recipe.submitRating);
 router.post("/getRecipes", recipe.getRecipes);
+router.post("/deleteRecipe", recipe.deleteRecipe);
 module.exports = router;

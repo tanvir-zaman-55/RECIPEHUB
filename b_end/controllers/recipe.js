@@ -191,4 +191,28 @@ module.exports = {
           res.send("Error retrieving recipes.");
         }
       },
+      deleteRecipe: async (req, res) => {
+        const { recipename } = req.body;
+    
+        if (!recipename) {
+          return res.status(400).send("Recipe name is required.");
+        }
+    
+        try {
+          // Find the recipe by its name
+          const recipe = await Recipe.findOne({ where: { recipename } });
+    
+          if (!recipe) {
+            return res.status(404).send("Recipe not found.");
+          }
+    
+          // Delete the recipe
+          await recipe.destroy();
+    
+          res.send("Recipe deleted successfully.");
+        } catch (err) {
+          console.error(err);
+          res.status(500).send("Error deleting the recipe.");
+        }
+      },
 };
